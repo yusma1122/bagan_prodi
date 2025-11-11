@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi Program Studi OBGYN FKIK ULM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: white;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 0;
+            padding: 40px;
+            box-shadow: none;
+            border: 2px solid black;
+        }
+        
+        h1 {
+            text-align: center;
+            color: black;
+            margin-bottom: 40px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .org-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .box {
+            background: white;
+            color: black;
+            padding: 20px 30px;
+            border-radius: 0;
+            box-shadow: none;
+            border: 2px solid black;
+            text-align: center;
+            min-width: 300px;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .box-title {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .box-name {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+        
+        .level-2 {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 0;
+            border: 1px solid black;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .unit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .unit-box {
+            background: white;
+            padding: 20px;
+            border-radius: 0;
+            box-shadow: none;
+            border: 1px solid black;
+        }
+        
+        .unit-box h3 {
+            color: black;
+            font-size: 16px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            border-bottom: 2px solid black;
+            padding-bottom: 8px;
+        }
+        
+        .unit-box .ketua {
+            font-weight: 600;
+            color: black;
+            margin-bottom: 8px;
+        }
+        
+        .unit-box .anggota {
+            color: black;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 8px;
+        }
+        
+        .unit-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .unit-box li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .unit-box li:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #333;
+        }
+        
+        .connector {
+            width: 2px;
+            height: 30px;
+            background: #333;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            .box {
+                min-width: 250px;
+                padding: 15px 20px;
+            }
+            .level-2 {
+                flex-direction: column;
+                align-items: center;
+            }
+            .unit-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>STRUKTUR ORGANISASI PROGRAM STUDI OBGYN FKIK ULM</h1>
+
+        <div class="org-chart">
+            <!-- Level 1: Rektor -->
+            <div class="box">
+                <div class="box-title">Rektor ULM</div>
+                <div class="box-name">Prof. Dr. Ahmad Alim Bachri, S.E., M.Si</div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- Level 2: Dekan -->
+            <div class="box">
+                <div class="box-title">Dekan FKIK ULM</div>
+                <div class="box-name">Prof. Dr. dr. Syamsul Arifin, M.Pd., FISPH, FISCM</div>
+            </div>
+
+            <div class="connector"></div>
+
+            <!-- Level 3: Koordinator & Ketua -->
+            <div class="level-2">
+                <div class="box">
+                    <div class="box-title">Koordinator Program Studi</div>
+                    <div class="box-name">dr. Ferry Armanza, Sp.OG, Subsp.Onk., M.Kes</div>
+                </div>
+
+                <div class="box">
+                    <div class="box-title">Ketua Departemen OBGYN</div>
+                    <div class="box-name">dr. Iwan Darma Putra, Sp.OG, Subsp.F.E.R.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unit-Unit -->
+        <div class="section">
+            <div class="section-title">UNIT-UNIT</div>
+            <div class="unit-grid">
+                <div class="unit-box">
+                    <h3>UNIT PENELITIAN & PENGEMBANGAN</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>Dr. Pribakti Budinurdjaja, Sp.OG, Subsp.Urogin RE</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. Renny Aditya, M.Kes, Subsp.Obginsos., FISQua</li>
+                        <li>dr. Ihya Ridlo Nizomy, M.Kes, Sp.OG, Subsp.Urogin RE</li>
+                        <li>dr. Hermin Sabaruddin, Sp.OG</li>
+                    </ul>
+                </div>
+
+                <div class="unit-box">
+                    <h3>UNIT PENGABDIAN KEPADA MASYARAKAT</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>dr. Renny Aditya, M.Kes, Subsp.Obginsos., FISQua</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. Samuel L Tobing, Sp.OG, Subsp.Obginsos</li>
+                        <li>dr. Jefry Albari Tribowo, Sp.And</li>
+                        <li>dr. Hermin Sabaruddin, Sp.OG</li>
+                    </ul>
+                </div>
+
+                <div class="unit-box">
+                    <h3>UNIT PENDIDIKAN & KURIKULUM</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>dr. Ferry Armanza, Sp.OG, Subsp.Onk., M.H.Kes</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. M. Robyanoor A.R., Sp.OG, Subsp.K.Fm., M.Kes, FISQua</li>
+                        <li>dr. Ruth Widhiati Raharjo Putri, Sp.OG, Subsp.K.Fm.</li>
+                        <li>dr. Setyo Teguh Waluyo, Sp.OG, Subsp.Onk</li>
+                        <li>dr. Yosef Dwi Cahyadi Salan, Sp.OG</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Perwalian Tahap -->
+        <div class="section">
+            <div class="section-title">PERWALIAN TAHAP</div>
+            <div class="unit-grid">
+                <div class="unit-box">
+                    <h3>Tahap 1</h3>
+                    <div>dr. Ferry Armanza, Sp.OG, Subsp.Onk., M.H.Kes</div>
+                </div>
+                <div class="unit-box">
+                    <h3>Tahap 2</h3>
+                    <div>dr. Bambang Abimanyu, Sp.OG, Subsp.K.Fm</div>
+                </div>
+                <div class="unit-box">
+                    <h3>Tahap 3</h3>
+                    <div>Dr. dr. Hariadi, Sp.OG, Subsp.Onk</div>
+                </div>
+                <div class="unit-box">
+                    <h3>Tahap 4</h3>
+                    <div>dr. Iwan Darma Putra, Sp.OG, Subsp.F.E.R.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divisi Pengajar -->
+        <div class="section">
+            <div class="section-title">TENAGA PENGAJAR DIVISI</div>
+            <div class="unit-grid">
+                <div class="unit-box">
+                    <h3>DIVISI ONKOLOGI GINEKOLOGI</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>Dr. dr. Hariadi, Sp.OG, Subsp.Onk</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. Ferry Armanza, Sp.OG, Subsp.Onk</li>
+                        <li>dr. Setyo Teguh Waluyo, Sp.OG, Subsp.Onk</li>
+                    </ul>
+                </div>
+
+                <div class="unit-box">
+                    <h3>DIVISI FETOMATERNAL</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>dr. Bambang Abimanyu, Sp.OG, Subsp.K.Fm</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. M. Robyanoor A.R., Sp.OG, Subsp.K.Fm., M.Kes, FISQua</li>
+                        <li>dr. Ruth Widhiati Raharjo Putri, Sp.OG, Subsp.K.Fm</li>
+                        <li>dr. Hermin Sabaruddin, Sp.OG</li>
+                    </ul>
+                </div>
+
+                <div class="unit-box">
+                    <h3>DIVISI UROGINEKOLOGI REKONSTRUKSI ESTETIKA</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>dr. Ihya Ridlo Nizomy, M.Kes, Sp.OG, Subsp.Urogin RE</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>Dr. dr. Pribakti Budinurdjaja, Sp.OG, Subsp.Urogin RE</li>
+                    </ul>
+                </div>
+
+                <div class="unit-box">
+                    <h3>DIVISI FERTILITAS ENDOKRINOLOGI REPRODUKSI</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>Dr. dr. Hardyan Sauqi, Sp.OG, Subsp.F.E.R.</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. Iwan Darma Putra, Sp.OG, Subsp.F.E.R.</li>
+                        <li>dr. Jefry Albari Tribowo, Sp.And</li>
+                        <li>dr. Yosef Dwi Cahyadi Salan, Sp.OG</li>
+                    </ul>
+                </div>
+
+                <div class="unit-box">
+                    <h3>DIVISI OBSTETRI GINEKOLOGI SOSIAL</h3>
+                    <div class="ketua">Ketua:</div>
+                    <div>Dr. dr. Renny Aditya, M.Kes, Subsp.Obginsos., FISQua</div>
+                    <div class="anggota">Anggota:</div>
+                    <ul>
+                        <li>dr. Samuel L Tobing, Sp.OG, Subsp.Obginsos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tenaga Kependidikan -->
+        <div class="section">
+            <div class="section-title">TENAGA KEPENDIDIKAN</div>
+            <div class="unit-grid">
+                <div class="unit-box">
+                    <h3>Keuangan</h3>
+                    <div>Ria Noor Darmayanti, S.Kom.</div>
+                </div>
+                <div class="unit-box">
+                    <h3>Operator Prodi</h3>
+                    <div>Astuti Handayani, A.Md.</div>
+                </div>
+                <div class="unit-box">
+                    <h3>IT Program Studi</h3>
+                    <div>Yusma Rahman, S.Kom.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
